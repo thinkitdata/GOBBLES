@@ -1,0 +1,217 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++GOBBLES+SECURITY+RESEARCH+TEAM+INCORPORATED+++++++++++++++++ 
+	ALERT! ALERT! OFF-BY-ONE OVERFLOW IN THTTPD! ALERT! ALERT! 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+#include "/usr/share/examples/kld/.../include/note.h"
+
+GOBBLES say he English not very good but he try best to impart idea across
+with help from dictionary.com and joe editor ^[L with ispell. So GOBBLES by
+no mean linguist but he do best so reader understand security issue at hand
+and patch immediately so darkside malicious cracker out there in wild not
+given time to do destroying valuable data and belong to national security.
+Please keep in mind that GOBBLES try to be accurate with information but he
+can only do he best to not make error. Like joke goes what fly say to bee:
+"Just BEE yourself!" hehehee ok so GOBBLES just be himself and hope public
+understand he mean well and not here provide information to attacker but to
+team bugtraq penetrator and vendor who help fix issue.
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+PRODUCT
+*******
+
+program: thttpd 2.20b (latest stable) and earlier
+website: http://www.acme.com/software/thttpd/thttpd.html
+
+SECURITY HISTORY
+****************
+
+Mr Bernstein disclose gaping hole in thttpd 2.04:
+
+http://archives.neohapsis.com/archives/vuln-dev/1999-q4/0185.html
+
+DiGiT disclose gaping hole in thttpd CGI application 'ssi':
+
+http://packetstorm.decepticons.org/0005-exploits/ssibug
+
+Other bug like '%2e%2e' directory traversal vulnerability also disclosed to
+team bugtraq penetrator.
+
+BACKGROUND
+**********
+
+GOBBLES members were in lab thinking about new way to punch hole in Internet
+when we thought about how WWW need webserver or it be quite useless hehe. So
+we start exploring possibility of webserver having hole and come across
+thttpd as promising security. GOBBLES now prove that promise broken. We did
+like so...
+
+bash-2.05$ cd thttpd-2.20b
+bash-2.05$ gtags
+bash-2.05$ htags -van
+
+... so we could then use web browser to navigate webserver src because
+cscope just require much finger acrobatics he he he ;)
+
+What follows is technical details of hole and you going to see how mind of
+GOBBLES work to make critical program fall to its knees >:|
+
+TECHNICAL DETAILS
+*****************
+
+bash-2.05$ pwd
+/home/GOBBLES/hacking/projects/current/thttpd-2.20b
+bash-2.05$ ls *.c
+fdwatch.c       match.c         strerror.c      tdate_parse.c   timers.c
+libhttpd.c      mmc.c           syslog.c        thttpd.c
+
+Bug is in libhttpd.c/auth_check():
+
+static int
+auth_check( httpd_conn* hc, char* dirname  )
+    {
+    static char* authpath;
+    static int maxauthpath = 0;
+    struct stat sb;
+    char authinfo[500];
+    char* authpass;
+[...]
+    l = b64_decode( &(hc->authorization[6]), authinfo, sizeof(authinfo) );
+    authinfo[l] = '\0';
+
+
+Notice authinfo buffer and its total size (500) go b64_decode function so
+username and password in HTTP header 'Authorization' field may get decode
+from base64 for processing (processed by the process hehehe >8^) ). Then
+notice auth_check() terminate authinfo with a NUL. Notice only automatic
+variable above authinfo in source code is stat structure 'sb' since 'static'
+qualifier make compiler put variable in data or bss segment depending on
+initialization. Variable 'l' get assigned result of b64_decode()
+function. How big it can be??? GOBBLES paste full b64_decode function...
+
+static int
+b64_decode( const char* str, unsigned char* space, int size )
+    {
+    const char* cp;
+    int space_idx, phase;
+    int d, prev_d = 0;
+    unsigned char c;
+
+    space_idx = 0;
+    phase = 0;
+    for ( cp = str; *cp != '\0'; ++cp )
+        {
+        d = b64_decode_table[(int) *cp];
+        if ( d != -1 )
+            {
+            switch ( phase )
+                {
+                case 0:
+                ++phase;
+                break;
+                case 1:
+                c = ( ( prev_d << 2 ) | ( ( d & 0x30 ) >> 4 ) );
+                if ( space_idx < size )
+                    space[space_idx++] = c;
+                ++phase;
+                break;
+                case 2:
+                c = ( ( ( prev_d & 0xf ) << 4 ) | ( ( d & 0x3c ) >> 2 ) );
+                if ( space_idx < size )
+                    space[space_idx++] = c;
+                ++phase;
+                break;
+                case 3:
+                c = ( ( ( prev_d & 0x03 ) << 6 ) | d );
+                if ( space_idx < size )
+                    space[space_idx++] = c;
+                phase = 0;
+                break;
+                }
+            prev_d = d;
+            }
+        }
+    return space_idx;
+    }
+
+Notice formal argument 'size' come from sizeof(authinfo) == 500. Then data
+stored in 'space' buffer which really 'authinfo' from other function. The
+variable 'space_idx' set to 0 and incremented as it used to index 'space'
+array. Size check "space_idx < size" mean space_idx can only reach 499. But
+then "space[space_idx++] = c" post-increment from 499 to 500. At end of
+function there is "return space_idx". Moving back...
+
+    l = b64_decode( &(hc->authorization[6]), authinfo, sizeof(authinfo) );
+    authinfo[l] = '\0';
+
+It made 'l' == 500 so "authinfo[500] = '\0'" be made and buffer is made
+overflow by one byte! THIS IS VERY BAD PROGRAMMING AND PROGRAMMER MUST LEARN
+NOT TO DO THIS SILLY KIND BUGS. WHEN PEOPLE LEARN?????
+
+Exploitable? Yes. If compiler arrange 'authinfo' first on stack, then on x86
+machine it possible to overwrite saved register ebp value and fuck over
+process like described by Olaf Kirch in 1998 team bugtraq post which
+describe "Poison NUL Byte" method of punching hole in software to get in
+computer.
+
+DEMONSTRATION
+*************
+
+1) Apply following diff:
+
+--- libhttpd.c  Tue Nov 20 14:50:00 2001
++++ libhttpd-new.c      Tue Nov 20 14:22:12 2001
+@@ -886,6 +886,7 @@
+     /* Decode it. */
+     l = b64_decode( &(hc->authorization[6]), authinfo, sizeof(authinfo) );
+     authinfo[l] = '\0';
++    printf("%02x\n", authinfo[499]); 
+     /* Split into user and password. */
+     authpass = strchr( authinfo, ':' );
+     if ( authpass == (char*) 0 )
+
+This allow us see what final element in array end up like.
+
+2) Build and then:
+
+[terminal 1]
+
+mkdir test
+echo "joe:blow" > test/.htpasswd
+./thttpd -D -p 7777
+
+[terminal 2] 
+
+(printf "GET /test/ HTTP/1.0\r\nAuthorization: Basic " ; printf `perl -e
+'print "A"x550'` | openssl enc -base64 -e -in /dev/stdin ; printf \
+"\r\n\r\n") | nc 0 7777
+
+[terminal 1]
+
+We see '41'. This mean off-by-one overflow is really present!
+
+EXPLOIT
+*******
+
+GOBBLES not release exploit until developer have time patch. Then it safe to
+provide exploit for team bugtraq commercial penetrator research community
+and so signature IDS vendor can add string for gobbles-exploit.c (but maybe
+not catch gobbles-exploit2.c hehehee j/k or other-exploit.c, but we provide
+enough information for IDS vendor to separate string from exploit ;)))) )
+
+GREETS
+******
+
+dianora, tsk, snow, carolyn meinel, john vranesevich, steve gibson, kimble,
+emmanuel goldstein, box.sk, @stake, securityfocus, blackhat.com, defcon.org,
+2600.com, #phrack@efnet, #hackphreak@undernet, bugtraq (thanks aleph1 and
+david ahmad for devoting your time to a great list), ntbugtraq (russel the
+love muscle ;D), cert.org, paul vixie, vesselin bontchev, reese witherspoon,
+kirstin dunst, katie holmes, aleister crowley, all our friends and family,
+and finally to everyone from #!GOBBLES on the irc.  
+
+GOBBLES SECURITY
+http://www.bugtraq.org/
+
+
