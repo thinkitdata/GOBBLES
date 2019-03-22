@@ -1,3 +1,5 @@
+!(https://github.com/thinkitdata/GOBBLES/blob/master/gobbles.gif)
+
 credit...   http://phrack.org/issues/58/3.html
 
 |=[ 0x03 ]=--------------------------------------------------------------=|
