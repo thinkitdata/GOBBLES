@@ -1,0 +1,171 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++GOBBLES+SECURITY+RESEARCH+TEAM+INCORPORATED+++++++++++++++++ 
+        ALERT! ALERT! YAHOO MESSENGER REPLAY ATTACK! ALERT! ALERT! 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+"Overt control... always has a finite life, because in the end there will be
+a challenge and rebellion against it. Covert control... can go on forever,
+because you don't rebel against something you don't know exists."
+
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+PRODUCT
+*******
+
+program: Yahoo! Messenger YMSG protocol
+website: http://messenger.yahoo.com/
+
+BACKGROUND
+**********
+
+GOBBLES was sitting down in lab with Yahoo! Messenger client running
+chatting with beautiful Susie who on he friends list on Yahoo. GOBBLES
+trying finish read Bruce Schneier _Applied Cryptography_ but Susie keep
+buzzing like crazy about music and pets (she say she has nice pussy) and
+then suddenly she say she writing some SPARC assembly codes and GOBBLES just
+go crazy hehe. Anyway after GOBBLES wake up to see she still talk about
+silly gossip, he click 'ignore' button and begin determined to break
+Messenger protocol with he new crypto knowledge.
+
+GOBBLES discovered very inane move made by Yahoo engineers in apparent
+effort to stop cleartext transmission of password during initial login
+packet exchange. Without full disclosure this hole not brought to public
+attention and make Yahoo more secure, so how can idiot say that full
+disclosure only secure a job?
+
+It wrong saying that only people who defend full disclosure are they who
+capitalize on it because not like GOBBLES acquire sports car working at
+GOBBLES BUGTRAQ SECURITY INC. When aleph1 leave r00t hacking group to be
+security professional he not profit like everyone say, so why everyone have
+to give these people hard time if they become security professional and
+contribute earth-shattering vulnerability like GOBBLES does in order to
+improve security and liberate humanity from darkside malicious cracker out
+there in wild?
+
+Revealing symlink vulnerability in Bruce Piano Tuner v0.7 help admin protect
+system from cracker out there and make cracker lose root. GOBBLES owes
+securityfocus website great deal because they provide helpful information
+that help me with cracking incident last year. This cracker he come on one
+of my system using team bugtraq penetrator exploit in bad way because
+GOBBLES was asleep and couldn't apply patch before cracker gank it from
+bugtraq. Anyway, cracker not do any damage, but he thought it his base. With
+patch information from securityfocus, GOBBLES was able fix security hole and
+lock him out :P
+
+TECHNICAL DETAILS
+*****************
+
+GOBBLES look at Dug Song dsniff msgsnarf.c and observe that YMSG application
+header have following format:
+
+struct ymsg {
+    unsigned char version[8];
+    unsigned short length;
+    unsigned short type;
+    unsigned char unknown1[4];
+    unsigned char unknown2[4];
+}
+
+GOBBLES look at libyahoo code from sourceforge and observe:
+
+/* Service constants */
+#define YAHOO_SERVICE_LOGON             1
+
+GOBBLES doing this on FreeBSD machine so he get patch for like...
+
+FreeBSD-SA-01:48                                           Security Advisory
+                                                                FreeBSD,
+Inc.
+
+Topic:          tcpdump contains remote buffer overflow
+
+Category:       core
+Module:         tcpdump
+Announced:      2001-07-17
+Credits:        Nick Cleaton <nick@cleaton.net>
+Affects:        All releases of FreeBSD 4.x prior to 4.4,
+                FreeBSD 4.3-STABLE prior to the correction date
+                FreeBSD 3.x is unaffected.
+Corrected:      2001-07-09
+Vendor status:  Patch released
+FreeBSD only:   NO
+
+... this so while he run tcpdump next he won't be compromised by darkside
+malicious cracker out there in wild or penetrator typing in wrong host to
+Vetescan stealth vulnerability assessment tool.
+
+GOBBLES then run tcpdump and using YMSG structure above as reference he find
+first packet with service type constant 0x01. This LOGIN packet. GOBBLES
+notice it use MCF/MD5 encryption of user password with crypt(3) salt like
+$1$_2S43d5f$. Encrypted password is sent over the wire in LOGIN packet. User
+is immediately authenticated. 
+
+MAJOR VULNERABILITY #1 IS THAT ATTACKER MAY SNIFF THIS AND BRUTE FORCE USER
+PASSWORD AKIN TO RECENT TEAM BUGTRAQ POP3 'APOP PASSWORDS AT RISK'
+ADVISORY:
+
+http://archives.neohapsis.com/archives/bugtraq/2001-07/0163.html
+
+MAJOR VULNERABILITY #2 IS THAT ATTACKER WHO CAPTURES LOGIN PACKET CAN USE
+SIMPLE REPLAY ATTACK WITH PASSWORD HASH INJECTED IN PACKET SENT BY CUSTOM
+CLIENT. 
+
+So only defense afforded by this dumb scheme over sending password
+unencrypted is protection against password reuse attack:
+
+"Sociological Ghasche Tree Model And Its 
+ Ramifications Concerning Password Reuse 
+ On Worldwide Computer Networks - USENIX 1999"  
+
+http://www.sec-lab.cs.qwe.edu/professors/Floyd/whitepapers/1999/reuse.pdf
+
+FIX
+***
+
+GOBBLES suggest Yahoo engineer use brain and come up with challenge-response
+mechanism. They set bad example for commercial security research community.
+They should pull finger out of bum and focus on protecting user instead of
+just pulling in money from job. Here $0.2 -- go buy clue.
+
+DEMONSTRATION
+*************
+
+As you see above, easy to observe packets with tcpdump. Ethereal not seem to
+have YMSG protocol support yet, so SANS professional at sans.org might need
+make $50,000/hour other way by using different tool for analysis instead of
+ethereal. Come with most operating system is tcpdump or snoop. Can also get
+sweet tool ngrep from route[GUARDENT] site:
+
+http://www.packetfactory.net/
+
+Or maybe you be creative and roll your own with Michael Schiffman libnet
+socket wrapper. It easy reproduce, no hurry, just take your time and see
+what you come up with.
+
+GREETS
+******
+
+dianora / evil angelica, tsk, snow, carolyn meinel, john vranesevich, steve
+gibson, kimble, knightmare, emmanuel goldstein, box.sk, @stake,
+securityfocus, sans.org, blackhat.com, defcon.org, 2600.com, #phrack@efnet,
+#hackphreak@undernet, bugtraq (thanks aleph1 and david ahmad for devoting
+your time to a great list), ntbugtraq (russel the love muscle ;D), cert.org,
+paul vixie, vesselin bontchev, reese witherspoon, kirsten dunst, katie
+holmes, aleister crowley, manly p hall, franz bardon, dennis ritchie,
+nietzsche, w. richard stevens, radiohead, george michael, larry wall,
+beethoven, francis bacon, bruce willis, bruce schneier, alan turing, john
+von neumann, donald knuth, michael abrash, robert sedgewick, and all our
+friends and family.
+
+
+GOBBLES SECURITY
+http://www.bugtraq.org/
+
+
+
+
+
+
+
+
+

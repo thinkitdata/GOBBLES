@@ -1,0 +1,400 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++GOBBLES+SECURITY+RESEARCH+TEAM+INCORPORATED+++++++++++++++++ 
+ALERT! ALERT!    LOCAL ROOT EXPLOIT FOR ALL MODERN LINUX! ALERT!    ALERT!
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Right now there nasty rumor concerning GOBBLES and GOBBLES Security and
+everyone who hang out at GOBBLES Labs, which GOBBLES shall take quick
+moment to clear up for all of universe right now so that spread lies die
+quick and all slander is done on issue, ok?
+
+When GOBBLES talk about objectional website full of slander and stupidity,
+he GOBBLES do not include http:// style url to website for all of world to
+see, quite unlike WOBBLES who still insist on making fun of GOBBLES on
+lists here and linking GOBBLES to things GOBBLES have no part of.
+
+GOBBLES Security is not associated in any way with antisecurity religious
+movement that occuring right now, and all those allegations against
+GOBBLES and he group are pure slander.  GOBBLES think it important that
+all software bugs are identified and exploits for everythign written and
+given out to academic community until penetrations rise so high vendor and
+programmer society realize they not exempt from security things and start
+to get serious about security so that real security measure can be brought
+to Internet and all can live together peacefully without the need of any
+penetrators anymore.  For some reason professional programming world think
+it still acceptable to put bufferoverflow and formatstring and silly race
+condition bug (hehe, Linux kernel!!!!!!!!) in they software and do not
+care about people who have much less skill than GOBBLES being able to
+break holes in software to get r00t; GOBBLES know that full disclosure
+only real way to fix this problem.  
+
+Further on subject to Cousin WOBBLES who now rogue, just because you
+WOBBLES work for big dollar company do not make it any more right for you
+to be able to make personal attacks on GOBBLES or anyone else on list, and
+the fact that you get away with it with silly personally attack on list is
+not very right, GOBBLES wish that moderators would be consistant with they
+message moderations on personal attacks, and not base them on the color of
+skin of list contributer.
+
+WOBBLES, GOBBLES is now personally addressing you in advisory.  Please,
+Cousin, do not continue this charade in public forum, if you dislike
+GOBBLES, everyone already know this, do not need to continue doing poopy
+smear campaign on professional forums.  GOBBLES would appreciate it if you
+seperate you professional WOBBLES [bindview] life from WOBBLES [ircs] life
+like real professional who not mix work and play, and leave GOBBLES alone
+and stop influencing people to ignore all security research done from
+anyone but Microsoft Certified Partners like yourself.  GOBBLES think you
+being less than professional and is becoming very pissed off at you...
+
+Also GOBBLES wonder about how professional it is of you to be trading you
+own code for scriptkid collected code as you imply in email
+
+ http://archives.neohapsis.com/archives/vuln-dev/2001-q4/0886.html
+
+and GOBBLES also wonder, why is it really important to post to mailing
+lists "another fake exploit" type of messages when everyone know there a
+million fake exploits going around (everyone with Redhat Linux Program 
+Honeypot should have own copy of WoH.tar.gz by now to prove this), do all
+honeypot operators flood mailing lists saying "new fake exploit with my
+name on it!" emails?  GOBBLES suspect the only reason you made that post
+was so you could put in cruel and slanderous remarks against the little
+guys who not making the big dollar from security work who you see as
+competition.
+
+Play nice, Cousin WOBBLES -- you very close to being expelled from family 
+for good, but if you decide to become nicer we will probably let you stay 
+member!
+
+
+JOKE
+****
+
+Q. What do you call a hacker who doesn't like wearing clothes?
+A. A GNUdist
+
+Heheheheheheheheheheheheheheheheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
+He He He He He (_(_)=========D
+                                Hehehehehehehehehehehehe
+                He He
+        He                              (.)(.)
+He
+.. . .. ... .. .. ... ........ ... . He He He .. Heeee.. He
+
+
+
+PRODUCT
+*******
+
+Program: 
+ Linux Kernel
+
+FreeBSD port:
+ None, hehehe!
+
+Author WWW:
+ http://www.transmeta.com
+
+Affected versions:
+ All modern versions? Perhaps every version of Linux out of the package!
+
+Affected platforms:
+ Linux Operating System
+
+BACKGROUND
+**********
+
+GOBBLES do what GOBBLES do best, GOBBLES do he copy/paste!
+
+                  Linux Online - About the Linux Operating System (p1 of 3)
+
+                               What is Linux
+
+   Linux is an operating system that was initially created as a hobby by
+   a young student, Linus Torvalds, at the University of Helsinki in
+   Finland. Linus had an interest in Minix, a small UNIX system, and
+   decided to develop a system that exceeded the Minix standards. He
+   began his work in 1991 when he released version 0.02 and worked
+   steadily until 1994 when version 1.0 of the Linux Kernel was released.
+   The current full-featured version is 2.4 (released January 2001) and
+   development continues.
+
+   Linux is developed under the GNU General Public License and its source
+   code is freely available to everyone. This however, doesn't mean that
+   Linux and its assorted distributions are free -- companies and
+   developers may charge money for it as long as the source code remains
+   available. Linux may be used for a wide variety of purposes including
+   networking, software development, and as an end-user platform. Linux
+   is often considered an excellent, low-cost alternative to other more
+   expensive operating systems.
+
+   Due to the very nature of Linux's functionality and availability, it
+   has become quite popular worldwide and a vast number of software
+   programmers have taken Linux's source code and adapted it to meet
+   their individual needs. At this time, there are dozens of ongoing
+   projects for porting Linux to various hardware configurations and
+   purposes.
+
+   Linux has an official mascot, the Linux Penguin, which was selected by
+   Linus Torvalds to represent the image he associates with the operating
+   system he created.
+
+   Although many variations of the word Linux exist, it is most often
+   pronounced with a short " i " and with the first syllable stressed, as
+   in LIH-nucks.
+
+Most penetrator familiar with some kind of Linux, normally just Redhat
+Linux (GOBBLES know most professional penetrators not whitehat or blackhat
+or greyhat really so they must be Redhats, hehe) which is perfect for
+penetrators of all perversions.  GOBBLES know that Redhat Linux install
+with every possible network daemon running without any default
+authentication making it ripe for penetrator pluckings.  GOBBLES realize
+this important feature of Redhat Linux (although it seem a little
+suspicious after 2,00,000 wuftp exploits that Redhat Linux makers might
+make anonymous ftp access not a default feature on they installations, oh
+well GOBBLES do not care) useful when customer place machine running
+Redhat Linux on network and penetrator can bring laptop to network during
+testing with Redhat Linux on it (GOBBLES hope sufficiently secured though,
+nothing quite as embarassing as experience from that Blackhat.com
+conference speaker guy who talk about how he penetration box got hacked
+before during he penetration testing with wuftpd warez, hehe idiot, at
+least he learned and now can make big dollar talking about experience at
+big conference) to run exploits from and show that yes indeed to customer
+that there are exploits from securityfocus.com mailing lists that let
+anyone in the world break in to these machines (hehe, penetrator should
+advise client to run chrootkit from chkrootkit.org to make sure penetrator
+only penetrator on network now hehe).
+
+GOBBLES have remedy for this actually though, where GOBBLES is rewriting
+hack.co.za whitehat archive in all Java and making nice interface for it
+so that penetrator can just take eEye scanner Retina on audits with
+unhackable hardened WinXP then use other exploits written in Java within
+pregenerated html pages parsed from Retina scan logs with point/click
+security action to penetrate hosts right from reports.  This similar to
+farm9.com private penetration suite carried around by farm9.com
+penetrators (hehe GOBBLES have funny log of one that will be published
+soon on website, stay tuned for this event) during penetration testing
+where they do Nessus scan probably then point/click attack servers with
+Internet Explorer and java exploits based off hack.co.za exploit, but
+since that copyright code GOBBLES cannot publish it and only can publish
+he groups own code based on similar compassion for full security community
+to benefit from. ;-P
+
+
+
+PROBLEM
+*******
+
+GOBBLES download recent linux kernel package like:
+
+ ftp://ftp.kernel.org/pub/linux/kernel/v2.4/linux-2.4.16.tar.gz
+
+then GOBBLES issue mv lin* /usr/src command, then chdir there to do he
+kernel update.
+
+root@LABSLACK:/usr/src# ls -l
+total 30760
+-rw-r--r--   1 root     root     29652798 Dec 21 20:52 linux-2.4.16.tar.gz
+...
+
+Then GOBBLES preceed to do tar zxf linux-2.4.16.tar.gz, normally GOBBLES
+would do tar zxvf linux-2.4.16.tar.gz, but then that make advisory really
+long hehe, so for today there not any verbosity!!!
+
+root@LABSLACK:/usr/src# cd linux
+root@LABSLACK:/usr/src/linux# ls -l
+total 3204
+-rw-r--r--   1 573      573         18689 Oct  9 18:00 COPYING
+-rw-r--r--   1 573      573         77693 Nov 11 13:09 CREDITS
+drwxr-xr-x  28 573      573          4096 Nov 22 13:53 Documentation/
+-rw-r--r--   1 573      573         38940 Nov 16 13:03 MAINTAINERS
+-rw-r--r--   1 573      573         14242 Oct  5 15:10 README
+-rw-r--r--   1 573      573          2815 Apr  6  2001 REPORTING-BUGS
+-rw-r--r--   1 573      573          8884 Mar  6  2001 Rules.make
+drwxr-xr-x  17 573      573          4096 Feb 13  2001 arch/
+drwxr-xr-x  39 573      573          4096 Dec 21 21:05 drivers/
+drwxr-xr-x  45 573      573          4096 Dec 21 21:29 fs/
+drwxr-xr-x  25 573      573          4096 Dec 21 21:13 include/
+drwxr-xr-x   2 573      573          4096 Dec 21 21:14 init/
+drwxr-xr-x   2 573      573          4096 Dec 21 21:37 ipc/
+drwxr-xr-x   2 573      573          4096 Dec 21 21:15 kernel/
+drwxr-xr-x   2 573      573          4096 Dec 21 21:37 lib/
+drwxr-xr-x   2 573      573          4096 Dec 21 21:22 mm/
+drwxr-xr-x  28 573      573          4096 Dec 21 21:37 net/
+drwxr-xr-x   5 573      573          4096 Dec 21 21:13 scripts/
+root@LABSLACK:/usr/src/linux#
+
+!@#!@#!@#@!
+
+Is GOBBLES the only person here who see gaping security problem with this?
+
+TECHNICAL DETAILS
+*****************
+
+When doing untar and unzip of tarball for Linux, GOBBLES report that uid and
+gid of kernel source not r00t like should be.  "But GOBBLES," say
+penetrator, "what is the significance of this?" to which GOBBLES would
+say, "hehe, if penetrator understood filesystem permissions and could
+program, penetrator would realize hole, here let me explain."
+
+See the two 573 in ls -l?  Those mean files own by user with id of 573,
+and group id of 573 also.  So, on system where other user have identical
+user id number, GOBBLES know that account can be used to get root on
+system because user would be able to _MODIFY_ANY_FILE_ in source, placing
+they own trojan and backdoor code, just waiting for idiot administrator to
+recompile with they new backdoors...
+
+If you having problem understanding user ids and things like that relating
+to filesystem permission system, GOBBLES strongly recommend you read:
+
+ http://www.attrition.org/~bronc/linux2.txt
+
+which is paper by famous hacker Bronc Buster (hackphreak.org, legions.org,
+cultdeadcow.com, 2600.com, hacked.cisco.com, very prestigious man) that
+indepth covers subject that GOBBLES hisself could not write better. ;)
+
+
+WORKAROUND
+**********
+
+GOBBLES suggest doing:
+
+# chown root.root /usr/src/linux -R
+
+to fix problem until kernel developers decide to put proper patch into
+next kernel versions.
+
+System not affected include Solaris, Digital Unix, and FreeBSD; other like
+systems have not been checked by GOBBLES yet to see if condition exist in
+them too.
+
+Kernels running patches like Openwall and LIDS and grsecurity also are
+vulnerable to this attack, so do not get false sense of safety when you do
+like patch -p0 stuff that they make you unhackable, hehehe...
+
+DEMONSTRATION
+*************
+
+Penetrator X is sniffing traffic to BOX, and get user account login
+password to system.  Penetrator X use GOBBLES sftp technique to use login
+and password to browse filesystem and steal crucial /etc/passwd file and
+also to check to see who own files in /usr/src/linux.
+
+Penetrator X now see it uid 573, so he issue command in sftp like 
+
+sftp>!grep 573 passwd
+lucky-idiot:x:573:573:a,very,lucky-idiot,:/home/lucky-idiot:/bin/bash
+sftp>
+
+and now Penetrator X know that if he are to get login/password to
+lucky-idiot account he be able to get quick root on system when all other
+methods of dot and slash failed, so Penetrator X decide to sniff traffic
+for a while to see if lucky-idiot will log in.  Also being efficient
+penetrator he decide to use ADM tool for pop3 password bruteforce cracking
+at same time to see if he can get lucky-idiot password before lucky-idiot
+log in (and Penetrator X smart knowing how to use napster.com tool ngrep
+to filter out he own IP from sniffer file so lots of lucky-idiot password
+attempts from he do not show up in parsed sniffer logs, hehe) and succeed
+very quickly in crack when finding lucky-idiot password on he own is same
+as username (hehe, translate to user: lucky-idiot password: lucky-idiot),
+then penetrator do like:
+
+X@Penetrator:/# ssh -l lucky-idiot victim
+
+to log in, then 
+
+lucky-idiot@victim:/usr/src/linux# cat >>include/something/some.h
+# Proof of Concept 
+# I could be inserting backdoors in your kernel source right now,
+# but I'm ethical whitehat so this is all the demonstration I need
+# to do on subject, otherwise you would be 0wn3d right now.
+^D
+
+then he log out and write up report for company saying "should be IPSec
+network, should not use plaintext protocols, should do chown -R technique
+from GOBBLES Advisory (hehe, he good penetrator who let company know where
+the real research is done), should be more careful in future, should
+submit the big dollar bill you now owe us...."
+
+
+CONCLUSION
+**********
+
+GOBBLES conclude that there are software holes everywhere and in the
+silliest things, and sometimes file permissions in things that are not
+suid with uid(0) can be exploited in indirect fashions to help penetrator
+get root.  GOBBLES suggest using brain a little to realize how this
+tar(8) program can introduce so many new holes into system without people
+realizing it. 
+
+
+FUNNY LINKS
+***********
+
+1) WOBBLES making fun of commerical software and bragging superiority
+   of opensourced software.
+
+   http://cert.uni-stuttgart.de/archive/bugtraq/2000/12/msg00303.html
+
+2) WOBBLES making fun of Company Bindview.com before WOBBLES got job
+   at Bindview; he also make fun of current Bindview employees at the
+   time... hmmm WOBBLES, you should have been nicer to them then, it
+   probably hurt you salary now!
+
+   http://cert.uni-stuttgart.de/archive/bugtraq/2000/12/msg00366.html
+
+
+
+GREETS
+******
+
+
+dianora, tsk, snow, carolyn meinel, john vranesevich, steve gibson, kimble,
+knightmare, emmanuel goldstein, box.sk, @stake, securityfocus, sans.org,
+blackhat.com, defcon.org, 2600.com, #phrack@efnet, #hackphreak@undernet,
+bugtraq (thanks aleph1 and david ahmad for devoting your time to a great
+list), ntbugtraq (russel the love muscle ;D), cert.org, paul vixie, vesselin
+bontchev, reese witherspoon, kirsten dunst, katie holmes, aleister crowley,
+manly p hall, franz bardon, dennis ritchie, nietzsche, w. richard stevens,
+radiohead, george michael, larry wall, beethoven, francis bacon, bruce
+willis, bruce schneier, alan turing, john von neumann, donald knuth, michael
+abrash, robert sedgewick, richard simmons, government boy, ralph lauren,
+kevin mitnick, david koresh, the violent femmes, legions of doom, quentin
+tarantino, JUPES, security.nnov.ru, dugsong, wayne gretzky,
+hhp-programming.net, so1o, the HaX0R bRoThErS, nasa.gov, alfred hitchcock,
+ray bradbury, linux torvalds, alyssa milano, sarah michelle geller, jennifer
+lopez, catherine zeta jones, robert de niro, plato, leonardo da vinci,
+nostradamus, adam weishaupt, adema, kmfdm, eliphas levi, john dee, goo goo
+dolls, savage garden, george bush, john howard, tony blair, ashida kim,
+andrew tanenbaum, comp.lang.c, solar designer, patanjali, vayu siddhi,
+deepak chopra, ajna chakra, fuzzy bunny, lockdown, bronc buster,
+attrition.org, cliff stoll, bill gates, alan cox, george harrison,
+berkeley.edu, microsoft.com, isox, american mcgee, princess toadstool, ru
+paul, sharon stone, taeho oh, napster, nocarrier, steve wozniak, captian
+crunch, tony the tiger, julliette lewis, oliver twist, yakko, wakko, santa
+claus, the easter bunny, the christmas tree, hacktech.org, mixter and the
+rest of #darknet/2xs, the planet Pluto, pluto the dog, walt disney, the
+smurfs, packetstormsecurity.org, chocolate, caramel, marshmallows, rice
+crispies, rice crispie treats, cousin WOBBLES, rfp, Alan@packetstorm, george
+bush senior, george w. bush, his drunken daughters, gary coleman, fat
+albert, rhino9, eEye.com, the djali zwan, digital unix, o'reilly &
+associates, hwa-security.net, #malvu/efnet, donkey kong, diddy kong, p
+diddy, mr. peanut, all girls who pose naked on webcam for GOBBLES, mr
+goldilocks, checkpoint.com, whoever invented deoderant, monkey.org, bono,
+micheal stipes, clark kent, bruce banner, ssh.com, hacked.cisco.com, thomas
+edison, steven king, P80 Systems, gnutella, colin powell, Joakim von Braun,
+#openbsd/efnet, jnathan/efnet, debian.org, mr. ed, scooby doo, spud
+mckenzie, sam i am, guy who wrote that bible book, george b. thomas junior,
+ross l. finney, maurice d. wier, john bobbit, transmeta.com, linus torvalds,
+naked supermodel in magazines, d'arcy gretzky, deep purple, shampoos that
+kill head lice, kraft.com, george clooney, jonathon swift, plan9 from outer 
+space, penelope cruz, chuck norris, mandy moore, christina aguilera, drew 
+barrymore, bjarne stroustrup, psychic friends network, david letterman, 
+~el8, jennicide, the mentor, kevin spacey, sho kosugi, michael dudikoff, 
+HERT, anton lavey, daath, stephen hawking, the illuminati, sml@subterrain.net 
+(we have sniffed emails of him telling his buddies that he's now an op in 
+#phrack@efnet -- everyone on efnet should join #phrack and congratulate him 
+on his promotion), spinux (he was the only guy in #phrack@efnet who ran our 
+trojaned sshd exploit and lost $HOME), efnet@ROUTE, the movie "dirty dancing",
+darth maul, and all our friends and family.
+
