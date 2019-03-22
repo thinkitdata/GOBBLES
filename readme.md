@@ -1,4 +1,4 @@
-!(https://github.com/thinkitdata/GOBBLES/blob/master/gobbles.gif)
+![GOBBLES](https://github.com/thinkitdata/GOBBLES/blob/master/gobbles.gif)
 
 credit...   http://phrack.org/issues/58/3.html
 
