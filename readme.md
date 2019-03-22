@@ -2,7 +2,7 @@
 
 GOBBLES was hands down the greatest hacking team past and present.  It's been a sad time since they chose to drop off the grid many years ago.  As it's truthfully said that in computing "we stand on the shoulders of giants", they were GIANTS indeed.
 
-credit for the below...   http://phrack.org/issues/58/3.html
+credit for the below pcode like bio...   http://phrack.org/issues/58/3.html
 
 |=[ 0x03 ]=--------------------------------------------------------------=|
 
