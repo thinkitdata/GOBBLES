@@ -1,6 +1,8 @@
 ![GOBBLES](https://github.com/thinkitdata/GOBBLES/blob/master/gobbles.gif)
 
-credit...   http://phrack.org/issues/58/3.html
+GOBBLES was hands down the greatest hacking team past and present.  It's been a sad time since they chose to drop off the grid.  As it's said that in computing "we stand on the backs of giants", they were GIANTS indeed.
+
+credit for the below...   http://phrack.org/issues/58/3.html
 
 |=[ 0x03 ]=--------------------------------------------------------------=|
 
