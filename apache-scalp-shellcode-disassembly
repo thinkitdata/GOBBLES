@@ -26,15 +26,15 @@ d:  b8 1f 00 00 00          mov    eax,0x1f   ;Move the value 31 into the eax re
 22: eb 0f                   jmp    0x33       ;Jump to the instruction at address 0x33
 24: 90                      nop               ;Do nothing
 25: ff 44 24 04             inc    DWORD PTR [esp+0x4]    ;Increment the value at the location 4 bytes above the current stack pointer
-29: 81 7c 24 04 00 01 00    cmp    DWORD PTR [esp+0x4],0x100
-30: 00
-31: 75 da                   jne    0xd
-33: c7 44 24 08 00 00 00    mov    DWORD PTR [esp+0x8],0x0
-3a: 00
-3b: b8 5a 00 00 00          mov    eax,0x5a
-40: cd 80                   int    0x80
-42: ff 44 24 08             inc    DWORD PTR [esp+0x8]
-46: 83 7c 24 08 03          cmp    DWORD PTR [esp+0x8],0x3
+29: 81 7c 24 04 00 01 00    cmp    DWORD PTR [esp+0x4],0x100    ;This line performs a comparison operation (cmp) between the value at the memory location [esp+0x4] and the constant value 0x100
+30: 00                                        ;This line is a no-op instruction
+31: 75 da                   jne    0xd        ;This line performs a conditional jump (jne) to the memory location 0xd if the previous comparison (cmp) was not equal
+33: c7 44 24 08 00 00 00    mov    DWORD PTR [esp+0x8],0x0    ;This line moves the constant value 0x0 into the memory location [esp+0x8]
+3a: 00                                        ;This line is a no-op instruction
+3b: b8 5a 00 00 00          mov    eax,0x5a   ;This line moves the constant value 0x5a into the eax register
+40: cd 80                   int    0x80       ;This line performs a software interrupt (int) with the value 0x80  i.e. systemcall
+42: ff 44 24 08             inc    DWORD PTR [esp+0x8]    ;This line increments the value at the memory location [esp+0x8]
+46: 83 7c 24 08 03          cmp    DWORD PTR [esp+0x8],0x3    ;This line performs a comparison operation (cmp) between the value at the memory location [esp+0x8] and the constant value 0x3
 4b: 75 ee                   jne    0x3b
 4d: 68 0b 6f 6b 0b          push   0xb6b6f0b
 52: 81 34 24 01 00 00 01    xor    DWORD PTR [esp],0x1000001
